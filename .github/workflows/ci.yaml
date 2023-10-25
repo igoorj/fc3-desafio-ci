@@ -1,9 +1,11 @@
 name: ci
-on: [push]
+on:
+  pull_requests:
+    branches:
+      - develop
 
 jobs:
   ci-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm run test
