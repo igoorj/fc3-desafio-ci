@@ -1,0 +1,9 @@
+name: ci
+on: [push]
+
+jobs:
+  ci-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
